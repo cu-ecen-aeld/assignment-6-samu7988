@@ -4,11 +4,11 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 # TODO: Set this  with the path to your assignments rep.  Use ssh protocol and see lecture notes
 # about how to setup ssh-agent for passwordless access
-# SRC_URI = "git@github.com:cu-ecen-aeld/assignments-3-and-later-samu7988.git;protocol=ssh;branch=main"
+# SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-samu7988.git;protocol=ssh;branch=main"
 
 PV = "1.0+git${SRCPV}"
 # TODO: set to reference a specific commit hash in your assignment repo
-#SRCREV = "67fa8f5f39fd89aa553b1e0b6941673577981d87"
+#SRCREV = "0dbe08272d48a2a49611374a04ae2b3b5efecc77"
 
 # This sets your staging directory based on WORKDIR, where WORKDIR is defined at 
 # https://www.yoctoproject.org/docs/latest/ref-manual/ref-manual.html#var-WORKDIR
@@ -19,7 +19,7 @@ S = "${WORKDIR}/git/server"
 # TODO: Add the aesdsocket application and any other files you need to install
 # See http://git.yoctoproject.org/cgit.cgi/poky/plain/meta/conf/bitbake.conf?h=warrior for yocto path prefixes
 FILES_${PN} += "${bindir}/aesdsocket"
-# TODO: customize these as necessary for any libraries you need for your application
+# TODO: customize these as necessary for any libraries you need for your application.
 #TARGET_LDFLAGS += "-pthread -lrt"
 EXTRA_OEMAKE += "'CC=${CC}'"
 TARGET_CC_ARCH += "${LDFLAGS}"
